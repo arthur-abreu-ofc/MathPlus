@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MathPlus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$']],
+      displayMath: [['$$', '$$']]
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="background-grid"></div>
+
+  <header class="navbar">
+    <a class="brand" href="#inicio"><span class="brand-mark">+</span><span>Math<span>PLUS</span></span></a>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#conteudos">Conteúdos</a>
+      <a href="#questoes">Questões</a>
+    </nav>
+    <div class="nav-pill">ENEM 2026/2027</div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero section">
+      <div class="hero-copy">
+        <div class="eyebrow">MATEMÁTICA • ENEM</div>
+        <h1>Aprenda matemática<br><span>de um jeito simples.</span></h1>
+        <p>Estude os principais conteúdos de geometria, veja explicações, fórmulas e exemplos e depois pratique com questões.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#conteudos">Ver conteúdos <span>→</span></a>
+          <a class="button ghost" href="#questoes">Resolver questões</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="floating-card card-a"><small>ESTUDO</small><strong>Conteúdo completo</strong><span>Explicação • Fórmula • Exemplo</span></div>
+        <div class="floating-card card-b"><small>PRÁTICA</small><strong>25 questões</strong><span>Questões de treino</span></div>
+        <div class="math-symbol">∑</div>
+      </div>
+    </section>
+
+    <section class="stats section">
+      <div class="stat-card"><strong id="progressCount">0</strong><span>questões respondidas</span></div>
+      <div class="stat-card"><strong id="hitCount">0%</strong><span>taxa de acerto</span></div>
+      <div class="stat-card"><strong id="topicCount">27+</strong><span>tópicos para estudar</span></div>
+    </section>
+
+    <section id="conteudos" class="section content-section">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">CENTRAL DE ESTUDOS</div>
+          <h2>Todos os conteúdos</h2>
+        </div>
+        <p>Foque em Seus Estudos!</p>
+        </div>
+
+      <div class="study-layout">
+        <aside class="content-menu">
+          <div class="menu-search">
+            <span>⌕</span>
+            <input id="topicSearch" type="search" placeholder="Buscar conteúdo...">
+          </div>
+          <div id="contentMenu"></div>
+        </aside>
+
+        <article id="topicDetail" class="topic-detail">
+          <div class="detail-welcome">
+            <div class="welcome-icon">+</div>
+            <div class="eyebrow">COMECE POR AQUI</div>
+            <h3>Escolha um conteúdo</h3>
+            <p>Selecione qualquer tópico no menu ao lado para estudar. Você encontrará uma explicação detalhada, as principais fórmulas e um exemplo de aplicação.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="questoes" class="section questions-section">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">PRÁTICA</div>
+          <h2>Questões</h2>
+
+      <div class="question-layout">
+        <aside class="question-sidebar">
+          <div class="question-progress">
+            <span>QUESTÃO</span>
+            <strong id="questionNumber">01</strong>
+            <div class="progress-line"><i id="questionProgress"></i></div>
+            <small id="questionProgressText">1 de 25</small>
+          </div>
+          <div id="questionList" class="question-list"></div>
+        </aside>
+
+        <article class="question-card">
+          <div class="question-meta">
+            <span id="questionSource">ENEM</span>
+            <span id="questionTopic">Geometria</span>
+          </div>
+          <h3 id="questionText"></h3>
+          <div id="alternatives" class="alternatives"></div>
+          <div id="feedback" class="feedback"></div>
+          <div class="question-actions">
+            <button id="checkButton" class="button primary">Confirmar resposta</button>
+            <button id="nextButton" class="button ghost" disabled>Próxima questão →</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong><span>+</span> MathPLUS</strong>
+    <p>Projeto de estudos de matemática para ENEM e Concursos.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
